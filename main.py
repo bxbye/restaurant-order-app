@@ -1,15 +1,10 @@
-import sys
-print(sys.executable)
+from fastapi import FastAPI
+from app.api.endpoints import menu, order, user
+app = FastAPI()
 
-from app.api.models.user import User
-# Create a User object
-user = User(1, "John Doe", "johndoe@example.com", "password123")
+# include routers to root "/" endpoint from different endpoints.
+app.include_router(menu.router)
 
-# Authenticate user
-email = input("Enter your email: ")
-password = input("Enter your password: ")
-
-if user.authenticate(email, password):
-    print("Authentication successful!")
-else:
-    print("Authentication failed.")
+@app.get("/")
+def index():
+    return {"message": "Hello World!"}

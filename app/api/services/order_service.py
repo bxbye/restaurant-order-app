@@ -6,7 +6,7 @@ from app.api.models.order import Order
 
 class OrderService:
     def __init__(self):
-        self._orders = []
+        self._orders = [] # all orders are kept in here.
 
     def create_order(self, id, user_id):
         order = Order(id, user_id)

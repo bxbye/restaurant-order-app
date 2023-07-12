@@ -6,7 +6,7 @@ from app.api.models.user import User
 
 class UserService:
     def __init__(self):
-        self._users = []
+        self._users = [] # all users are kept in here.
 
     def create_user(self, id, name, email, password):
         user = User(id, name, email, password)

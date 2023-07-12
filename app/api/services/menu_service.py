@@ -6,7 +6,7 @@ from app.api.models.menu import MenuItem
 
 class MenuService:
     def __init__(self):
-        self._menu_items = []
+        self._menu_items = [] # all menu items is kept here.
 
     def add_menu_item(self, id, name, price, description):
         menu_item = MenuItem(id, name, price, description)
@@ -14,6 +14,7 @@ class MenuService:
         return menu_item
 
     def get_menu_item_by_id(self, item_id):
+        item_id = int(item_id)
         for menu_item in self._menu_items:
             if menu_item.id == item_id:
                 return menu_item

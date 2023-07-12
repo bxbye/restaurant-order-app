@@ -1,0 +1,20 @@
+Here's a brief overview of the fundamental concepts in FastAPI to help you get started:
+API Router: FastAPI uses routers to define groups of related endpoints. An API router is an instance of the APIRouter class from FastAPI. You can define routes and their corresponding operations (GET, POST, PUT, etc.) within the router.
+
+Route Definition: A route is defined using a decorator method from the router instance (@router.get, @router.post, etc.). The decorator specifies the URL path and the HTTP method associated with the route.
+
+Path Parameters: Path parameters are parts of the URL that are used to capture variable values. They are defined within curly braces in the URL path and can be accessed as parameters in the route function. For example, /users/{user_id} captures the user_id value as a parameter in the corresponding route function.
+
+Query Parameters: Query parameters are used to pass additional data to the server as key-value pairs in the URL. They are appended to the URL after a question mark (?) and can be accessed as function parameters in the route function. For example, /users?name=John&age=25 passes the name and age as query parameters.
+
+Request Body: Request bodies contain data sent by the client in a POST, PUT, or PATCH request. FastAPI uses Pydantic models to define the structure and validation rules for request bodies. You can define the request body as a parameter with the model type hint in the route function.
+
+Response Models: FastAPI supports automatic serialization of response data into JSON using Pydantic models. You can define a response model by specifying the return type hint of the route function as a Pydantic model.
+
+Dependency Injection: FastAPI supports dependency injection to manage dependencies required by route functions. You can declare dependencies using function parameters or as decorators with the @app.depends syntax. FastAPI will automatically handle the dependency resolution and injection.
+
+API Documentation: FastAPI automatically generates interactive API documentation (Swagger UI) based on the defined routes and models. You can access the documentation by visiting /docs or /redoc endpoint of your API.
+
+These are just the basic concepts of FastAPI. As you dive deeper into FastAPI development, you'll discover more features and capabilities, such as handling authentication, handling errors, using path operations, and more.
+
+It's recommended to refer to the official FastAPI documentation (https://fastapi.tiangolo.com/) for more detailed information, examples, and advanced usage scenarios. The documentation provides comprehensive guidance and examples to help you build robust and efficient APIs with FastAPI.

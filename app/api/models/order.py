@@ -27,9 +27,11 @@ class Order:
     def status(self, value):
         self._status = value
     #methods
+    # adds item to order items list
     def add_item(self, item):
         self._items.append(item)
         self._total_price += item.price
+    # remove item from order item list
     def remove_item(self, item):
         self._items.remove(item)
         self._total_price -= item.price
