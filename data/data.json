@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "abc123"
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "email": "michael@example.com",
+      "password": "pass456"
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "name": "Pizza",
+      "price": 10.99,
+      "description": "Delicious cheese pizza"
+    },
+    {
+      "id": 2,
+      "name": "Burger",
+      "price": 8.99,
+      "description": "Juicy beef burger with fries"
+    },
+    {
+      "id": 3,
+      "name": "Salad",
+      "price": 6.99,
+      "description": "Fresh garden salad"
+    },
+    {
+      "id": 4,
+      "name": "Pasta",
+      "price": 12.99,
+      "description": "Classic pasta dish with marinara sauce"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "items": [1, 2],
+      "status": "Pending",
+      "total_price": 19.98
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "items": [3],
+      "status": "Pending",
+      "total_price": 6.99
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "items": [2, 4],
+      "status": "Completed",
+      "total_price": 21.98
+    }
+  ]
+}

@@ -8,8 +8,8 @@ class OrderService:
     def __init__(self):
         self._orders = [] # all orders are kept in here.
 
-    def create_order(self, id, user_id):
-        order = Order(id, user_id)
+    def create_order(self, id, user_id, items=None, status=None):
+        order = Order(id, user_id, items, status)
         self._orders.append(order)
         return order
 
@@ -25,6 +25,9 @@ class OrderService:
             if order.user_id == user_id:
                 user_orders.append(order)
         return user_orders
+
+    def get_orders(self):
+        return self._orders
 
     def update_order_status(self, order_id, status):
         order = self.get_order_by_id(order_id)

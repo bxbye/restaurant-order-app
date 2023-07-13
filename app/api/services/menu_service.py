@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 
@@ -41,7 +42,6 @@ class MenuService:
             self._menu_items.remove(menu_item)
             return True
         return False
-
 """
 # Create a MenuService instance
 menu_service = MenuService()

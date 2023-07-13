@@ -5,6 +5,7 @@ import sys
 sys.path.append(os.getcwd())
 from app.api.models.menu import MenuItem
 
+# writing tests for MenuItem class
 def test_menu_item_attributes():
     menu_item = MenuItem(1, "Cheeseburger", 10.99, "A delicious cheeseburger")
     

@@ -18,6 +18,13 @@ def test_order_attributes():
     assert len(order.items) == 2
     assert order.status == "Pending"
 
+    order.remove_item(item1)
+    assert order.id == 1
+    assert order.status == "Pending"
+    assert order.user_id == 123
+    assert len(order.items) == 1
+
+
 def test_order_total_price():
     item1 = MenuItem(1, "Cheeseburger", 10.99, "A delicious cheeseburger")
     item2 = MenuItem(2, "French Fries", 4.99, "Crispy and golden fries")

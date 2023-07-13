@@ -24,7 +24,10 @@ class UserService:
             if user.email == email:
                 return user
         return None
-
+    
+    def get_users(self):
+        return self._users
+    
     def update_user(self, user_id, name=None, email=None, password=None):
         user = self.get_user_by_id(user_id)
         if user:
